@@ -1,0 +1,15 @@
+AWSAccountID: "<YOUR AWS ACCOUNT_ID HERE>"
+AWSProfileName: "rehan"
+AWSProfileRegion: "us-east-1"
+
+App: "config-4-build-tool"
+Environment: "prod"
+Version: "0.0.0"
+Build: "0"
+
+SsmParameterStoreConfig: "cdk-multi-environment-4-build-tool-prod"
+
+Parameters:
+  # Get from "SsmParameterStoreConfig"
+  LambdaInsightsLayer:
+  SomeExternalApiUrl: "https://api.something-external.com"

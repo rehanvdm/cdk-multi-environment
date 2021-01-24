@@ -1,0 +1,30 @@
+{
+  "name": "2-external-file",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk",
+    "cdk-diff-dev": "tsc && cdk diff \"*\" -c config=dev --profile rehan",
+    "cdk-diff-prod": "tsc && cdk diff \"*\" -c config=prod --profile rehan",
+    "cdk-deploy-dev": "tsc && cdk deploy \"*\" -c config=dev --profile rehan --require-approval=never --progress=events",
+    "cdk-deploy-prod": "tsc && cdk deploy \"*\" -c config=prod --profile rehan --require-approval=never --progress=events"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "1.85.0",
+    "@types/jest": "^26.0.10",
+    "@types/node": "10.17.27",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.2.0",
+    "aws-cdk": "1.85.0",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-iam": "1.85.0",
+    "@aws-cdk/aws-lambda": "1.85.0",
+    "@aws-cdk/core": "1.85.0",
+    "js-yaml": "^4.0.0",
+    "source-map-support": "^0.5.16"
+  }
+}

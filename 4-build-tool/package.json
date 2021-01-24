@@ -1,0 +1,33 @@
+{
+  "name": "4-external-build-tool",
+  "version": "0.1.0",
+  "scripts": {
+    "prebuild": "typescript-json-schema stacks/lib/build-config.ts * --out config/schema.json --required",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk",
+    "cdk-generate-diff": "node node_modules/gulp/bin/gulp.js --color --gulpfile config/gulpfile.js generate_diff",
+    "cdk-deploy": "node node_modules/gulp/bin/gulp.js --color --gulpfile config/gulpfile.js deploy_SKIP_APPROVAL"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "1.85.0",
+    "@types/jest": "^26.0.10",
+    "@types/node": "10.17.27",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.2.0",
+    "aws-cdk": "1.85.0",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-iam": "1.85.0",
+    "@aws-cdk/aws-lambda": "1.85.0",
+    "@aws-cdk/core": "1.85.0",
+    "ajv": "^7.0.3",
+    "aws-sdk": "^2.829.0",
+    "gulp": "^4.0.2",
+    "js-yaml": "^4.0.0",
+    "source-map-support": "^0.5.16",
+    "typescript-json-schema": "^0.47.0"
+  }
+}

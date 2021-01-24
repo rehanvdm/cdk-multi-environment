@@ -1,0 +1,46 @@
+{
+  "app": "node index",
+  "context": {
+    "@aws-cdk/core:enableStackNameDuplicates": "true",
+    "aws-cdk:enableDiffNoFail": "true",
+    "@aws-cdk/core:stackRelativeExports": "true",
+    "@aws-cdk/aws-ecr-assets:dockerIgnoreSupport": true,
+    "@aws-cdk/aws-secretsmanager:parseOwnedSecretName": true,
+    "@aws-cdk/aws-kms:defaultKeyPolicies": true,
+    "@aws-cdk/aws-s3:grantWriteWithoutAcl": true,
+
+    "dev": {
+      "AWSAccountID" : "<YOUR AWS ACCOUNT_ID HERE>",
+      "AWSProfileName": "rehan",
+      "AWSProfileRegion" : "us-east-1",
+
+      "App": "config-1-context",
+      "Environment": "dev",
+      "Version": "0.0.0",
+      "Build": "1",
+
+      "Parameters":
+      {
+        "LambdaInsightsLayer": "arn:aws:lambda:us-east-1:580247275435:layer:LambdaInsightsExtension:14",
+        "SomeExternalApiUrl": "https://api-dev.something-external.com"
+      }
+    },
+    "prod": {
+      "AWSAccountID" : "<YOUR AWS ACCOUNT_ID HERE>",
+      "AWSProfileName": "rehan",
+      "AWSProfileRegion" : "us-east-1",
+
+      "App": "config-1-context",
+      "Environment": "prod",
+      "Version": "0.0.0",
+      "Build": "0",
+
+      "Parameters":
+      {
+        "LambdaInsightsLayer": "arn:aws:lambda:us-east-1:580247275435:layer:LambdaInsightsExtension:14",
+        "SomeExternalApiUrl": "https://api.something-external.com"
+      }
+    }
+
+  }
+}

@@ -1,0 +1,12 @@
+AWSAccountID: "<YOUR AWS ACCOUNT_ID HERE>"
+AWSProfileName: "rehan"
+AWSProfileRegion: "us-east-1"
+
+App: "config-2-external-file"
+Environment: "dev"
+Version: "0.0.0"
+Build: "0"
+
+Parameters:
+  LambdaInsightsLayer: "arn:aws:lambda:us-east-1:580247275435:layer:LambdaInsightsExtension:14"
+  SomeExternalApiUrl: "https://api-dev.something-external.com"

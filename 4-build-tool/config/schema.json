@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "BuildConfig": {
+            "properties": {
+                "AWSAccountID": {
+                    "type": "string"
+                },
+                "AWSProfileName": {
+                    "type": "string"
+                },
+                "AWSProfileRegion": {
+                    "type": "string"
+                },
+                "App": {
+                    "type": "string"
+                },
+                "Build": {
+                    "type": "string"
+                },
+                "Environment": {
+                    "type": "string"
+                },
+                "Parameters": {
+                    "$ref": "#/definitions/BuildParameters"
+                },
+                "SsmParameterStoreConfig": {
+                    "type": "string"
+                },
+                "Version": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "AWSAccountID",
+                "AWSProfileName",
+                "AWSProfileRegion",
+                "App",
+                "Build",
+                "Environment",
+                "Parameters",
+                "SsmParameterStoreConfig",
+                "Version"
+            ],
+            "type": "object"
+        },
+        "BuildParameters": {
+            "properties": {
+                "LambdaInsightsLayer": {
+                    "pattern": "^arn:aws:lambda:",
+                    "type": "string"
+                },
+                "SomeExternalApiUrl": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "LambdaInsightsLayer",
+                "SomeExternalApiUrl"
+            ],
+            "type": "object"
+        }
+    }
+}
+
