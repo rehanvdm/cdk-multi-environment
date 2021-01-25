@@ -1,4 +1,4 @@
-#  4 Methods to configure multiple environments in the AWS CDK that can be found here
+#  4 Methods to configure multiple environments in the AWS CDK
 
 This the code base for a blog post: https://www.rehanvdm.com/aws/4-methods-to-configure-multiple-environments-in-the-aws-cdk/index.html
 
